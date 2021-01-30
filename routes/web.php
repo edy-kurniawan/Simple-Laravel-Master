@@ -24,3 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile')->middleware('auth');
 
 Route::get('/cms/category', App\Http\Livewire\Cms\CategoryLivewire::class)->name('category')->middleware('auth');
+
+Route::get('category-datatables', function () {
+    return view('livewire/category');
+});

@@ -36,7 +36,8 @@
     @else
         <link rel="stylesheet" href="{{ mix(config('adminlte.laravel_mix_css_path', 'css/app.css')) }}">
     @endif
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css" integrity="sha512-l7qZAq1JcXdHei6h2z8h8sMe3NbMrmowhOl+QkP3UhifPpCW2MC4M0i26Y8wYpbz1xD9t61MLT9L1N773dzlOA==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
     {{-- Livewire Styles --}}
@@ -107,13 +108,6 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
     <script type="text/javascript">
-
-        $(document).ready(function() {
-            $('#table').DataTable({  
-                "processing": true, 
-                "responsive": true,
-            });
-        });
         
         window.livewire.on('closeModal', () => {
             $('#form')[0].reset();

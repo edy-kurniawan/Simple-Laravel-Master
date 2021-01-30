@@ -20,8 +20,6 @@ class CategoryLivewire extends Component
         $this->desc = "";
     }
 
-    
-    
     public function render()
     {
         $data  = Category::all();

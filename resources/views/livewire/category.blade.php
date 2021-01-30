@@ -14,30 +14,7 @@
 
     <!-- /.card-header -->
     <div class="card-body">
-      <table id="table" class="table table-bordered table-striped">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Desc</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach($data as $row)
-          <tr>
-            <td>{{$counter++}}</td>
-            <td>{{$row->name}}</td>
-            <td>{{$row->desc}}</td>
-            <td>
-              <button type="button" wire:click="delete({{ $row->id }})" class="btn btn-danger">Delete</button>
-              <button type="button" data-toggle="modal" data-target="#exampleModal" wire:click="edit({{ $row->id }})"
-                class="btn btn-warning">Edit</button>
-            </td>
-          </tr>
-          @endforeach
-        </tbody>
-      </table>
+      <livewire:category-datatables searchable="name, desc" exportable />
     </div>
     <!-- /.card-body -->
   </div>
