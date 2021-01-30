@@ -4,9 +4,9 @@ namespace App\Http\Livewire\Cms;
 
 use Livewire\Component;
 use App\Models\Category;
-
 class CategoryLivewire extends Component
 {
+    public $model = Category::class;
     public $counter = 1;
     public $categoryId, $name, $desc;
 
@@ -19,6 +19,8 @@ class CategoryLivewire extends Component
         $this->name = "";
         $this->desc = "";
     }
+
+    
     
     public function render()
     {
